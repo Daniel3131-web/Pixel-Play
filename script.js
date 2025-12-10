@@ -113,50 +113,64 @@ async function gerarNumeros() {
 
 window.onload = function () {
   let CurrentPage = window.location.pathname;
+  
+  // Normaliza o caminho (remove barra inicial se existir)
+  let normalizedPage = CurrentPage.startsWith('/') ? CurrentPage.substring(1) : CurrentPage;
+  
+  // Verifica se está na página index
+  let isIndexPage = normalizedPage.includes("index.html") || 
+                    normalizedPage === "" || 
+                    normalizedPage === "/" ||
+                    CurrentPage === "/index.html" ||
+                    CurrentPage === "/Pixel-Play/index.html";
 
-  if (CurrentPage == "Pixel-Play/index.html" || CurrentPage == "../index.html") {
-
-    iniciarLoop();
-
+  // Se estiver na index, inicia o loop
+  if (isIndexPage) {
+    if (typeof iniciarLoop === 'function') {
+      iniciarLoop();
+    }
   }
 
-  let j = 0;
+  let usuarioEncontrado = false;
 
-  for (j = 0; j <= localStorage.length; j++) {
+  // Procura por usuário ativo no localStorage
+  for (let j = 0; j < localStorage.length; j++) {
     let id = localStorage.key(j);
     let dados = localStorage.getItem(id);
-    var users = JSON.parse(dados);
+    
+    try {
+      var users = JSON.parse(dados);
 
-    if (users) {
-      if (users.Status_ == "Ativo") {
+      if (users && users.Status_ == "Ativo") {
         Usuario = users.Username_;
         const Welcome = document.getElementById("Welcome-User");
 
         if (Welcome) {
-
           if (Usuario == "Admin") {
             Welcome.innerHTML = Usuario + ", Bem vindo ao Menu de criação!";
           } else {
             Welcome.innerHTML = Usuario + ", Bem vindo ao Menu!";
           }
-
         }
 
-        return false;
+        usuarioEncontrado = true;
+        break; // Encontrou o usuário, sai do loop
       }
+    } catch (e) {
+      console.error("Erro ao processar dados:", e);
+      continue;
     }
   }
 
-  if (j > this.localStorage.length) {
-    /* TIRA A BARRA PARA O GITHUB && E COLOCAR BARRA PARA LSEVER*/
-    if (
-      CurrentPage == "/Pixel-Play/index.html" ||
-      CurrentPage == "/index.html"
-    ) {
-      return false;
+  // Se não encontrou usuário ativo E NÃO está na index ou login, redireciona
+  if (!usuarioEncontrado && !isIndexPage) {
+    // Não redireciona se já estiver em páginas de login
+    let isLoginPage = normalizedPage.includes("Login.html") || 
+                      normalizedPage.includes("Create.html");
+    
+    if (!isLoginPage) {
+      window.location.href = "./Login/Login.html";
     }
-
-    window.location.href = "./Login/Login.html";
   }
 };
 
