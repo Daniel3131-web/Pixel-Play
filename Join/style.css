@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  min-height: 80vh;
+}
+
+.icon-trofeu {
+  width: 128px;
+  height: 128px;
+  background-image: url(/Imgs/Icons/trofeu.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+#pixel-titulo {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#Inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+#ID_Partida {
+  color: black;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+.btn-lg {
+  top: 35%;
+}
