@@ -150,8 +150,8 @@ window.onload = function () {
   if (j > this.localStorage.length) {
     /* TIRA A BARRA PARA O GITHUB && E COLOCAR BARRA PARA LSEVER*/
     if (
-      CurrentPage == "Pixel-Play/index.html" ||
-      CurrentPage == "index.html"
+      CurrentPage == "/Pixel-Play/index.html" ||
+      CurrentPage == "/index.html"
     ) {
       return false;
     }
