@@ -92,11 +92,11 @@ async function iniciarLoop() {
         await gerarNumeros();
         
         document.getElementById("Hero-Game01").style.backgroundImage =
-      "url('/Imgs/Hero-Games/Hero" + a + ".svg')";
+      "url('../Imgs/Hero-Games/Hero" + a + ".svg')";
         document.getElementById("Hero-Game02").style.backgroundImage =
-      "url('/Imgs/Hero-Games/Hero" + b + ".svg')";
+      "url('../Imgs/Hero-Games/Hero" + b + ".svg')";
         document.getElementById("Hero-Game03").style.backgroundImage =
-      "url('/Imgs/Hero-Games/Hero" + c + ".svg')";
+      "url('../Imgs/Hero-Games/Hero" + c + ".svg')";
 
         await new Promise(resolve => setTimeout(resolve, 5000)); // 10 segundos
     }
