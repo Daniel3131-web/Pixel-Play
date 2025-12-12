@@ -52,16 +52,16 @@ main {
 }
 
 #Tipo1 {
-  background-image: url(/Imgs/Campeonato/Tipo1.svg);
+  background-image: url(../Imgs/Campeonato/Tipo1.svg);
 }
 
 #Tipo2 {
-  background-image: url(/Imgs/Campeonato/Tipo2.svg);
+  background-image: url(../Imgs/Campeonato/Tipo2.svg);
 }
 
 #Tipo3 {
   opacity: 25%;
-  background-image: url(/Imgs/Campeonato/Tipo3.svg);
+  background-image: url(../Imgs/Campeonato/Tipo3.svg);
 }
 
 /* Responsividade do Main */
