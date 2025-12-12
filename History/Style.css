@@ -110,7 +110,7 @@ main {
 
 #Cs {
     border: 2px solid ;
-    background-image: url(/Imgs/GameImgs/imgame06.svg);
+    background-image: url(../Imgs/GameImgs/imgame06.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -125,7 +125,7 @@ main {
 
 #Valorant {
     border: 2px solid ;
-    background-image: url(/Imgs/GameImgs/imgame07.svg);
+    background-image: url(../Imgs/GameImgs/imgame07.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -139,7 +139,7 @@ main {
 
 #Lol {
     border: 2px solid ;
-    background-image: url(/Imgs/GameImgs/imgame04.svg);
+    background-image: url(../Imgs/GameImgs/imgame04.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -152,39 +152,39 @@ main {
 }
 
 #P1 {
-  background-image: url(/Imgs/Pfp/P1.jpg);
+  background-image: url(../Imgs/Pfp/P1.jpg);
 }
 
 #P2 {
-  background-image: url(/Imgs/Pfp/P2.jpg);
+  background-image: url(../Imgs/Pfp/P2.jpg);
 }
 
 #P3 {
-  background-image: url(/Imgs/Pfp/P3.jpg);
+  background-image: url(../Imgs/Pfp/P3.jpg);
 }
 
 #P1_2 {
-  background-image: url(/Imgs/Pfp/P1_2.jpg);
+  background-image: url(../Imgs/Pfp/P1_2.jpg);
 }
 
 #P2_2 {
-  background-image: url(/Imgs/Pfp/P2_2.jpg);
+  background-image: url(../Imgs/Pfp/P2_2.jpg);
 }
 
 #P3_2 {
-  background-image: url(/Imgs/Pfp/P3_2.jpg);
+  background-image: url(../Imgs/Pfp/P3_2.jpg);
 }
 
 #P1_3 {
-  background-image: url(/Imgs/Pfp/P1_3.jpg);
+  background-image: url(../Imgs/Pfp/P1_3.jpg);
 }
 
 #P2_3 {
-  background-image: url(/Imgs/Pfp/P2_3.jpg);
+  background-image: url(../Imgs/Pfp/P2_3.jpg);
 }
 
 #P3_3 {
-  background-image: url(/Imgs/Pfp/P3_3.jpg);
+  background-image: url(../Imgs/Pfp/P3_3.jpg);
 }
 
 @media (max-width: 992px) {
